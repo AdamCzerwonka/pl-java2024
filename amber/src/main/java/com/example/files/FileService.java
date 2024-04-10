@@ -1,6 +1,7 @@
 package com.example.files;
 
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class FileService {
@@ -9,6 +10,6 @@ public class FileService {
         // TODO: implement here
         // read file content and return true if searchingText found
 
-        return false;
+        return Files.readString(path).contains(searchingText);
     }
 }
