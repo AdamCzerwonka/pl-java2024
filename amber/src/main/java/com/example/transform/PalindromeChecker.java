@@ -6,7 +6,8 @@ public class PalindromeChecker {
         // TODO: implement here
         // TIP: you can use StringBuilder.reverse method
 
-
-        return false;
+        StringBuilder builder = new StringBuilder(text);
+        String reversed = builder.reverse().toString();
+        return text.equals(reversed);
     }
 }
