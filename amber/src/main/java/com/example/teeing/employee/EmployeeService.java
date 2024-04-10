@@ -21,6 +21,6 @@ public class EmployeeService {
         // TODO: implement here
         // use List::stream method
 
-        return 0.0;
+       return employees.stream().mapToDouble(Employee::getSalary).average().orElse(0.0);
     }
 }
