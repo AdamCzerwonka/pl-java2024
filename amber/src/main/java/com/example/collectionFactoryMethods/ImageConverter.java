@@ -13,6 +13,6 @@ public class ImageConverter {
         // TODO: implement here
         // return immutable set of file keys
 
-        return new TreeSet<>();
+        return Set.of(JPG_FILE_KEY, PNG_FILE_KEY, BMP_FILE_KEY);
     }
 }
