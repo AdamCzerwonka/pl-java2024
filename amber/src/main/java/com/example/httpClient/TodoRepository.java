@@ -14,15 +14,13 @@ public class TodoRepository {
         // use HttpResponse.BodyHandlers.ofString() handler
         // return response body
 
-        //nie da sie
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(new URI("https://jsonplaceholder.typicode.com/todos/1"))
+                .GET()
+                .build();
 
-
-        return "{\n" +
-                "  \"userId\": 1,\n" +
-                "  \"id\": 1,\n" +
-                "  \"title\": \"delectus aut autem\",\n" +
-                "  \"completed\": false\n" +
-                "}";
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        return response.body();
     }
-
 }
