@@ -10,6 +10,12 @@ public class ImportedCSVTextProcessor {
         // 4. add "-done" at the end
         // 5. to uppercase
 
-        return "";
+        line = line.replace(",", " ");
+        line = line.replace("none", "");
+        line = line.trim();
+        line += "-done";
+        line = line.toUpperCase();
+
+        return line;
     }
 }
