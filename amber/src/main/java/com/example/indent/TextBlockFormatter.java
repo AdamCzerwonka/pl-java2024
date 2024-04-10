@@ -6,7 +6,8 @@ public class TextBlockFormatter {
     String formatLinesToCodeBlockIndent(String code) {
         // TODO: implement here
         // use CODE_TEXT_BLOCK_INDENT as padding value
+        // return formatted code block
 
-        return "";
+        return code.indent(CODE_TEXT_BLOCK_INDENT);
     }
 }
